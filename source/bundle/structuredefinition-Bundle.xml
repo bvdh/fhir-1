@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../publish/StructureDefinition.xsd">
   <id value="Bundle"/>
   <meta>
     <lastUpdated value="2021-01-02T08:58:31.578+11:00"/>
@@ -279,7 +279,7 @@
       </extension>
       <path value="Bundle.link"/>
       <short value="Links related to this Bundle"/>
-      <definition value="A series of links that provide context to this bundle."/>
+      <definition value="A series of links that provide context to this bundle. The behavior of navigation link types (next/prev/first/last) are well defined for searchset and history Bundles but are not currently defined for other types. Implementers who choose to use such link relationships for other bundle types will need to negotiate behavior with their interoperability partners."/>
       <comment value="Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). &#xA;&#xA;Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.&#xA;&#xA;This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific."/>
       <min value="0"/>
       <max value="*"/>
@@ -299,6 +299,9 @@
       </type>
       <isSummary value="true"/>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="??"/>
+        </extension>
         <strength value="required"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/iana-link-relations"/>
       </binding>
@@ -612,8 +615,7 @@
       <min value="0"/>
       <max value="1"/>
       <type>
-        <code value="Resource"/>
-        <profile value="http://hl7.org/fhir/StructureDefinition/OperationOutcome"/>
+        <code value="OperationOutcome"/>
       </type>
       <isSummary value="true"/>
     </element>

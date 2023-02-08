@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../publish/StructureDefinition.xsd">
   <id value="StructureDefinition"/>
   <meta>
     <lastUpdated value="2021-01-05T10:01:24.148+11:00"/>
@@ -238,7 +238,7 @@
         <key value="sdf-29"/>
         <severity value="warning"/>
         <human value="Elements in Resources must have a min cardinality or 0 or 1 and a max cardinality of 1 or *"/>
-        <expression value="((kind in 'resource' | 'complex-type') and (specialization = 'derivation')) implies differential.element.where((min != 0 and min != 1) or (max != '1' and max != '*')).empty()"/>
+        <expression value="((kind in 'resource' | 'complex-type') and (derivation= 'specialization')) implies differential.element.where((min != 0 and min != 1) or (max != '1' and max != '*')).empty()"/>
       </constraint>
       <mapping>
         <identity value="rim"/>
@@ -330,6 +330,9 @@
       </type>
       <isSummary value="true"/>
       <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="??"/>
+        </extension>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/version-algorithm"/>
       </binding>
@@ -587,11 +590,7 @@
     </element>
     <element id="StructureDefinition.keyword">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="deprecated">
-          <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status-reason">
-            <valueMarkdown value="Use the artifact-keyword extension instead"/>
-          </extension>
-        </valueCode>
+        <valueCode value="deprecated"/>
       </extension>
       <path value="StructureDefinition.keyword"/>
       <short value="Assist with indexing and finding"/>
@@ -900,9 +899,6 @@
       <constraint>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
           <valueBoolean value="true"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation">
-          <valueMarkdown value="It is bad practice to set the root element of a profile to 'mustSupport' as mustSupport should always be determined by the element referencing a type.  The designer of a StructureDefinition cannot know all circumstances in which a type or profile might be used"/>
         </extension>
         <key value="sdf-26"/>
         <severity value="error"/>

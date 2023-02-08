@@ -900,6 +900,9 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
           <valueBoolean value="true"/>
         </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation">
+          <valueMarkdown value="One cannot use a resource and not use the root, as such MustSupport does not add value here."/>
+        </extension>
         <key value="sdf-26"/>
         <severity value="error"/>
         <human value="The root element of a profile should not have mustSupport = true"/>

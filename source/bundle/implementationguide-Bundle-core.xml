@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<ImplementationGuide xmlns="http://hl7.org/fhir">
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../publish/ImplementationGuide.xsd">
   <id value="Bundle-core"/>
   <name value="Common extensions for bundle-related types"/>
   <title value="Common extensions for bundle-related types"/>
@@ -8,6 +8,4 @@
   <date value="2015-03-11T00:00:00.000"/>
   <publisher value="Health Level Seven, Inc. - FHIR Core WG"/>
   <description value="Defines &quot;common&quot; extensions for use with the Bundle resource and contained elements"/>
-  <definition>
-  </definition>
 </ImplementationGuide>

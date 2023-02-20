@@ -2,10 +2,60 @@
 
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../publish/ImplementationGuide.xsd">
   <id value="Bundle-core"/>
-  <name value="Common extensions for bundle-related types"/>
-  <title value="Common extensions for bundle-related types"/>
+  <name value="Common extensions and profiles for bundle-related types"/>
+  <title value="Common extensions and profiles for bundle-related types"/>
   <status value="draft"/>
   <date value="2015-03-11T00:00:00.000"/>
   <publisher value="Health Level Seven, Inc. - FHIR Core WG"/>
   <description value="Defines &quot;common&quot; extensions for use with the Bundle resource and contained elements"/>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/batch-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/batch-response-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/document-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/history-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/message-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/search-set-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/search-set-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/subscription-notification-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/transaction-bundle"/>
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/transaction-response-bundle"/>
+      </reference>
+    </resource>
 </ImplementationGuide>

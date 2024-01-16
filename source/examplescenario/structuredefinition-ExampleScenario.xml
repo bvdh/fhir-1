@@ -476,7 +476,7 @@
       <constraint>
         <key value="exs-23"/>
         <severity value="error"/>
-        <human value="actor.key canot be 'OTHER'"/>
+        <human value="actor.key cannot be 'OTHER'"/>
         <expression value="key != 'OTHER'"/>
       </constraint>
 			<mapping>
@@ -849,7 +849,7 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="ExampleScenario.process.title"/>
-      <short value="Label for procss"/>
+      <short value="Label for process"/>
       <definition value="A short descriptive label the process to be used in tables or diagrams."/>
       <min value="1"/>
       <max value="1"/>

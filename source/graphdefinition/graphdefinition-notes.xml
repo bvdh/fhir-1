@@ -93,7 +93,7 @@ Systems may either provide a pre-defined list of graph definitions that clients 
 from, or allow clients to define their own GraphDefinition resources and then refer to them.
 </p>
 <p>
-Server may also allow clients also pass in their own graph definition using a text representation:
+Server may also allow clients also pass in their own graph definition using a <a href="https://hl7.org/fhir/6.0.0-ballot1/graphdefinition.html#text">text representation</a>:
 </p>
 <pre>
   GET [base]/MedicationDispense/example/$graph?definition=Patient{managingOrganization:Organization{endpoint:Endpoint}}
@@ -342,7 +342,7 @@ where:
 </p>
 <ul>
  <li>description, min, max, path, sliceName, params and resource-type-rules are all optional</li>
- <li>resource-compartment-rules is present if there's a compartent, and the syntax is {use} {rule} {code}. If the rule is 'custom' then the syntax is '=' '{fhirpath}' '{description}' </li>
+ <li>resource-compartment-rules is present if there's a compartment, and the syntax is {use} {rule} {code}. If the rule is 'custom' then the syntax is '=' '{fhirpath}' '{description}' </li>
 </ul>
 <p>
 In this format, the amount of whitespace, and its form, is irrelevant. For the purposes
